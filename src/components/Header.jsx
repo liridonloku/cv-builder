@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Header extends Component {
   render() {
-    return <header style={headerStyle}>CV Maker</header>;
+    return <header style={headerStyle}>{this.props.title}</header>;
   }
 }
 
