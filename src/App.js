@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
 import GeneralInfo from "./components/GeneralInfo";
+import Education from "./components/Education";
 import "./App.css";
 
 export default class App extends Component {
@@ -16,6 +17,12 @@ export default class App extends Component {
         title: "Software Engineering",
         firstYear: 2011,
         lastYear: 2014,
+      },
+      {
+        schoolName: "High School",
+        title: "Student",
+        firstYear: 2008,
+        lastYear: 2010,
       },
     ],
     experience: [
@@ -38,6 +45,7 @@ export default class App extends Component {
       <div>
         <Header title="CV Maker" />
         <GeneralInfo info={this.state.generalInfo} />
+        <Education education={this.state.education} />
       </div>
     );
   }
