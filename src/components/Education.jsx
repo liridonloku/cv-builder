@@ -6,7 +6,12 @@ export class Education extends Component {
     const items = this.props.education.map((education) => (
       <EducationItem education={education} />
     ));
-    return <div style={educationStyle}>{items}</div>;
+    return (
+      <div style={educationStyle}>
+        <div className="title">Education</div>
+        {items}
+      </div>
+    );
   }
 }
 
@@ -15,7 +20,7 @@ const educationStyle = {
   flexDirection: "column",
   gap: "5px",
   margin: "5px 10px",
-  border: "1px solid black",
+  paddingLeft: "5px",
 };
 
 export default Education;

@@ -4,13 +4,18 @@ export class EducationItem extends Component {
   render() {
     return (
       <div>
-        <p>School name: {this.props.education.schoolName}</p>
-        <p>Title: {this.props.education.title}</p>
-        <p>Started on: {this.props.education.firstYear}</p>
-        <p>Finished: {this.props.education.lastYear}</p>
+        <p style={yearsStyle}>
+          {this.props.education.firstYear} - {this.props.education.lastYear}
+        </p>
+        <p>{this.props.education.schoolName}</p>
+        <p>{this.props.education.title}</p>
       </div>
     );
   }
 }
+
+const yearsStyle = {
+  color: "blue",
+};
 
 export default EducationItem;

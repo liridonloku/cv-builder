@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./components/Header";
 import GeneralInfo from "./components/GeneralInfo";
 import Education from "./components/Education";
+import Experience from "./components/Experience";
 import "./App.css";
 
 export default class App extends Component {
@@ -31,12 +32,16 @@ export default class App extends Component {
         position: "CTO",
         firstYear: 2017,
         lastYear: 2020,
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec nisl porta, mollis eros venenatis, semper eros. Donec sed justo orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
       },
       {
         company: "Amazon",
         position: "Developer",
         firstYear: 2014,
         lastYear: 2017,
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec nisl porta, mollis eros venenatis, semper eros. Donec sed justo orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
       },
     ],
   };
@@ -45,6 +50,7 @@ export default class App extends Component {
       <div>
         <Header title="CV Maker" />
         <GeneralInfo info={this.state.generalInfo} />
+        <Experience experience={this.state.experience} />
         <Education education={this.state.education} />
       </div>
     );
