@@ -3,12 +3,14 @@ import React, { Component } from "react";
 export class EducationItem extends Component {
   render() {
     return (
-      <div>
-        <p style={yearsStyle}>
-          {this.props.education.firstYear} - {this.props.education.lastYear}
-        </p>
-        <p>{this.props.education.schoolName}</p>
-        <p>{this.props.education.title}</p>
+      <div className="education-item">
+        <ul style={{ paddingLeft: "15px" }}>
+          <li style={yearsStyle}>
+            {this.props.education.firstYear} - {this.props.education.lastYear}
+          </li>
+          <li>{this.props.education.schoolName}</li>
+          <li>{this.props.education.title}</li>
+        </ul>
       </div>
     );
   }

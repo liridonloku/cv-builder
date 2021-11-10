@@ -29,6 +29,7 @@ export default class App extends Component {
     experience: [
       {
         company: "Google",
+        location: "Mountain View, CA",
         position: "CTO",
         firstYear: 2017,
         lastYear: 2020,
@@ -38,6 +39,7 @@ export default class App extends Component {
       {
         company: "Amazon",
         position: "Developer",
+        location: "Seattle, WA",
         firstYear: 2014,
         lastYear: 2017,
         description:

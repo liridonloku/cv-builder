@@ -19,7 +19,7 @@ const experienceStyle = {
   display: "flex",
   flexDirection: "column",
   gap: "5px",
-  margin: "5px 10px",
+  margin: "20px 10px",
   paddingLeft: "5px",
 };
 
