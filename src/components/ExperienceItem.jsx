@@ -7,7 +7,7 @@ export class ExperienceItem extends Component {
         <p style={yearsStyle}>
           {this.props.job.firstYear} - {this.props.job.lastYear}
         </p>
-        <p>
+        <p style={{ fontWeight: "bold", margin: "5px 0" }}>
           {this.props.job.position} - {this.props.job.company},{" "}
           {this.props.job.location}
         </p>

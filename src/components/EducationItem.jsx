@@ -8,7 +8,9 @@ export class EducationItem extends Component {
           <li style={yearsStyle}>
             {this.props.education.firstYear} - {this.props.education.lastYear}
           </li>
-          <li>{this.props.education.schoolName}</li>
+          <li style={{ fontWeight: "bold" }}>
+            {this.props.education.schoolName}
+          </li>
           <li>{this.props.education.title}</li>
         </ul>
       </div>

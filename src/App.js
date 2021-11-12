@@ -23,7 +23,7 @@ export default class App extends Component {
         schoolName: "High School",
         title: "Student",
         firstYear: 2008,
-        lastYear: 2010,
+        lastYear: 2011,
       },
     ],
     experience: [
