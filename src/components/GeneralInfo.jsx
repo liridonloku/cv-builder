@@ -7,6 +7,8 @@ export class GeneralInfo extends Component {
         <h3>{this.props.info.name}</h3>
         <p>email: {this.props.info.email}</p>
         <p>phone no.: {this.props.info.phone}</p>
+        <p>{this.props.info.position}</p>
+        <p>{this.props.info.description}</p>
       </div>
     );
   }

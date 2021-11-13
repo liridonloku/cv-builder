@@ -11,6 +11,9 @@ export default class App extends Component {
       name: "donX",
       email: "donX@don.com",
       phone: "+123456789",
+      position: "Software Engineer",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec nisl porta, mollis eros venenatis, semper eros. Donec sed justo orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
     },
     education: [
       {
