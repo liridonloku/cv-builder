@@ -102,7 +102,7 @@ export default class ExperienceInput extends Component {
       </form>
     ));
     return (
-      <div>
+      <div style={{ margin: "15px 0" }}>
         <h3 style={{ textAlign: "center" }}>Experience</h3>
         {items}
         <div style={{ margin: "0 15px" }}>

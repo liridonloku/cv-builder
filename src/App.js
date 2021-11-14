@@ -5,6 +5,7 @@ import GeneralInfo from "./components/GeneralInfo";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 import ExperienceInput from "./components/ExperienceInput";
+import EducationInput from "./components/EducationInput";
 import "./App.css";
 
 export default class App extends Component {
@@ -219,6 +220,79 @@ export default class App extends Component {
     });
   };
 
+  onTitleChange = (e) => {
+    let newEducation = this.state.education.map((school) => {
+      if (e.target.getAttribute("data-id") === school.id) {
+        school.title = e.target.value;
+      }
+      return school;
+    });
+    this.setState({
+      education: newEducation,
+    });
+  };
+
+  onFirstSchoolYearChange = (e) => {
+    let newEducation = this.state.education.map((school) => {
+      if (e.target.getAttribute("data-id") === school.id) {
+        school.firstYear = e.target.value;
+      }
+      return school;
+    });
+    this.setState({
+      education: newEducation,
+    });
+  };
+
+  onLastSchoolYearChange = (e) => {
+    let newEducation = this.state.education.map((school) => {
+      if (e.target.getAttribute("data-id") === school.id) {
+        school.lastYear = e.target.value;
+      }
+      return school;
+    });
+    this.setState({
+      education: newEducation,
+    });
+  };
+
+  onSchoolNameChange = (e) => {
+    let newEducation = this.state.education.map((school) => {
+      if (e.target.getAttribute("data-id") === school.id) {
+        school.schoolName = e.target.value;
+      }
+      return school;
+    });
+    this.setState({
+      education: newEducation,
+    });
+  };
+
+  removeSchool = (e) => {
+    e.preventDefault();
+    let newEducation = this.state.education.filter(
+      (school) => e.target.getAttribute("data-id") !== school.id
+    );
+    this.setState({
+      education: newEducation,
+    });
+  };
+
+  addNewSchool = () => {
+    this.setState({
+      education: [
+        ...this.state.education,
+        {
+          schoolName: "",
+          title: "",
+          firstYear: "",
+          lastYear: "",
+          id: Math.floor(Math.random() * 10000000).toString(),
+        },
+      ],
+    });
+  };
+
   render() {
     return (
       <div>
@@ -243,6 +317,16 @@ export default class App extends Component {
             addNewJob={this.addNewJob}
             removeJob={this.removeJob}
           />
+          <EducationInput
+            education={this.state.education}
+            onTitleChange={this.onTitleChange}
+            onFirstSchoolYearChange={this.onFirstSchoolYearChange}
+            onLastSchoolYearChange={this.onLastSchoolYearChange}
+            onSchoolNameChange={this.onSchoolNameChange}
+            removeSchool={this.removeSchool}
+            addNewSchool={this.addNewSchool}
+          />
+          <div className="separator"></div>
           <GeneralInfo info={this.state.generalInfo} />
           <Experience experience={this.state.experience} />
           <Education education={this.state.education} />

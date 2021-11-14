@@ -31,3 +31,9 @@
 .experience-item {
   margin-bottom: 10px;
 }
+
+.separator {
+  height: 3px;
+  width: 100%;
+  margin: 20px 0;
+}
