@@ -58,8 +58,10 @@ export default class ExperienceInput extends Component {
           <input
             type="text"
             name="firstYear"
+            data-id={job.id}
             defaultValue={job.firstYear}
             style={{ flexGrow: "1" }}
+            onChange={this.props.onFirstYearChange}
           />
         </div>
         <div style={sectionStyle}>
@@ -69,8 +71,10 @@ export default class ExperienceInput extends Component {
           <input
             type="text"
             name="lastYear"
+            data-id={job.id}
             defaultValue={job.lastYear}
             style={{ flexGrow: "1" }}
+            onChange={this.props.onLastYearChange}
           />
         </div>
         <div style={sectionStyle}>
@@ -80,8 +84,10 @@ export default class ExperienceInput extends Component {
           <textarea
             type="text"
             name="description"
+            data-id={job.id}
             defaultValue={job.description}
             style={{ flexGrow: "1", resize: "vertical" }}
+            onChange={this.props.onJobDescriptionChange}
           />
         </div>
       </form>

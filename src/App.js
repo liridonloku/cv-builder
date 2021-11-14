@@ -156,6 +156,42 @@ export default class App extends Component {
     });
   };
 
+  onFirstYearChange = (e) => {
+    let newExperience = this.state.experience.map((job) => {
+      if (e.target.getAttribute("data-id") === job.id) {
+        job.firstYear = e.target.value;
+      }
+      return job;
+    });
+    this.setState({
+      experience: newExperience,
+    });
+  };
+
+  onLastYearChange = (e) => {
+    let newExperience = this.state.experience.map((job) => {
+      if (e.target.getAttribute("data-id") === job.id) {
+        job.lastYear = e.target.value;
+      }
+      return job;
+    });
+    this.setState({
+      experience: newExperience,
+    });
+  };
+
+  onJobDescriptionChange = (e) => {
+    let newExperience = this.state.experience.map((job) => {
+      if (e.target.getAttribute("data-id") === job.id) {
+        job.description = e.target.value;
+      }
+      return job;
+    });
+    this.setState({
+      experience: newExperience,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -174,6 +210,9 @@ export default class App extends Component {
             onPositionChange={this.onPositionChangeExperience}
             onCompanyChange={this.onCompanyChange}
             onLocationChange={this.onLocationChange}
+            onFirstYearChange={this.onFirstYearChange}
+            onLastYearChange={this.onLastYearChange}
+            onJobDescriptionChange={this.onJobDescriptionChange}
           />
           <GeneralInfo info={this.state.generalInfo} />
           <Experience experience={this.state.experience} />
