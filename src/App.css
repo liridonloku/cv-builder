@@ -4,10 +4,22 @@
   box-sizing: border-box;
 }
 
-body {
+#root > div {
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+}
+
+.container {
+  max-width: 800px;
 }
 
 .title {

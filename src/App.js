@@ -124,17 +124,19 @@ export default class App extends Component {
     return (
       <div>
         <Header title="CV Maker" />
-        <InputGeneralInfo
-          info={this.state.generalInfo}
-          onNameChange={this.onNameChange}
-          onEmailChange={this.onEmailChange}
-          onPhoneChange={this.onPhoneChange}
-          onPositionChange={this.onPositionChange}
-          onDescriptionChange={this.onDescriptionChange}
-        />
-        <GeneralInfo info={this.state.generalInfo} />
-        <Experience experience={this.state.experience} />
-        <Education education={this.state.education} />
+        <div className="container">
+          <InputGeneralInfo
+            info={this.state.generalInfo}
+            onNameChange={this.onNameChange}
+            onEmailChange={this.onEmailChange}
+            onPhoneChange={this.onPhoneChange}
+            onPositionChange={this.onPositionChange}
+            onDescriptionChange={this.onDescriptionChange}
+          />
+          <GeneralInfo info={this.state.generalInfo} />
+          <Experience experience={this.state.experience} />
+          <Education education={this.state.education} />
+        </div>
       </div>
     );
   }

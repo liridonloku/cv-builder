@@ -40,6 +40,7 @@ export default class InputGeneralInfo extends Component {
             pattern="(\+|00)[1-9][0-9 \-\(\)\.]{7,32}"
             style={{ flexGrow: "1" }}
             onChange={this.props.onPhoneChange}
+            formNoValidate
           />
         </div>
         <div style={sectionStyle}>
