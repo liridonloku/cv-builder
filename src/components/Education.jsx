@@ -6,12 +6,16 @@ export class Education extends Component {
     const items = this.props.education.map((education) => (
       <EducationItem education={education} key={education.id} />
     ));
-    return (
-      <div style={educationStyle}>
-        <div className="title">Education</div>
-        {items}
-      </div>
-    );
+    if (items.length > 0) {
+      return (
+        <div style={educationStyle}>
+          <div className="title">Education</div>
+          {items}
+        </div>
+      );
+    } else {
+      return <div></div>;
+    }
   }
 }
 

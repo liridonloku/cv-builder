@@ -13,51 +13,14 @@ export default class App extends Component {
     super();
     this.state = {
       generalInfo: {
-        name: "donX",
-        email: "donX@don.com",
-        phone: "+123456789",
-        position: "Software Engineer",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec nisl porta, mollis eros venenatis, semper eros. Donec sed justo orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+        name: "",
+        email: "",
+        phone: "",
+        position: "",
+        description: "",
       },
-      education: [
-        {
-          schoolName: "MIT",
-          title: "Software Engineering",
-          firstYear: 2011,
-          lastYear: 2014,
-          id: "0",
-        },
-        {
-          schoolName: "High School",
-          title: "Student",
-          firstYear: 2008,
-          lastYear: 2011,
-          id: "1",
-        },
-      ],
-      experience: [
-        {
-          company: "Google",
-          location: "Mountain View, CA",
-          position: "CTO",
-          firstYear: 2017,
-          lastYear: 2020,
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec nisl porta, mollis eros venenatis, semper eros. Donec sed justo orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-          id: "2",
-        },
-        {
-          company: "Amazon",
-          position: "Developer",
-          location: "Seattle, WA",
-          firstYear: 2014,
-          lastYear: 2017,
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec nisl porta, mollis eros venenatis, semper eros. Donec sed justo orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-          id: "3",
-        },
-      ],
+      education: [],
+      experience: [],
     };
   }
 

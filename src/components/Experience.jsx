@@ -6,12 +6,16 @@ export class Experience extends Component {
     const items = this.props.experience.map((job) => (
       <ExperienceItem job={job} key={job.id} />
     ));
-    return (
-      <div style={experienceStyle}>
-        <div className="title">Experience</div>
-        {items}
-      </div>
-    );
+    if (items.length > 0) {
+      return (
+        <div style={experienceStyle}>
+          <div className="title">Experience</div>
+          {items}
+        </div>
+      );
+    } else {
+      return <div></div>;
+    }
   }
 }
 
