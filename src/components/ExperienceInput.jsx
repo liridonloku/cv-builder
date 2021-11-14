@@ -45,8 +45,10 @@ export default class ExperienceInput extends Component {
           <input
             type="text"
             name="location"
+            data-id={job.id}
             defaultValue={job.location}
             style={{ flexGrow: "1" }}
+            onChange={this.props.onLocationChange}
           />
         </div>
         <div style={sectionStyle}>

@@ -58,14 +58,6 @@ export default class App extends Component {
         },
       ],
     };
-    this.onNameChange = this.onNameChange.bind(this);
-    this.onEmailChange = this.onEmailChange.bind(this);
-    this.onPhoneChange = this.onPhoneChange.bind(this);
-    this.onPositionChange = this.onPositionChange.bind(this);
-    this.onDescriptionChange = this.onDescriptionChange.bind(this);
-    this.onPositionChangeExperience =
-      this.onPositionChangeExperience.bind(this);
-    this.onCompanyChange = this.onCompanyChange.bind(this);
   }
 
   onNameChange = (e) => {
@@ -152,6 +144,18 @@ export default class App extends Component {
     });
   };
 
+  onLocationChange = (e) => {
+    let newExperience = this.state.experience.map((job) => {
+      if (e.target.getAttribute("data-id") === job.id) {
+        job.location = e.target.value;
+      }
+      return job;
+    });
+    this.setState({
+      experience: newExperience,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -169,6 +173,7 @@ export default class App extends Component {
             experience={this.state.experience}
             onPositionChange={this.onPositionChangeExperience}
             onCompanyChange={this.onCompanyChange}
+            onLocationChange={this.onLocationChange}
           />
           <GeneralInfo info={this.state.generalInfo} />
           <Experience experience={this.state.experience} />
