@@ -90,6 +90,15 @@ export default class ExperienceInput extends Component {
             onChange={this.props.onJobDescriptionChange}
           />
         </div>
+        <div style={sectionStyle}>
+          <button
+            style={{ width: "100%" }}
+            data-id={job.id}
+            onClick={this.props.removeJob}
+          >
+            Remove
+          </button>
+        </div>
       </form>
     ));
     return (

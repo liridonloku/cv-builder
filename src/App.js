@@ -192,6 +192,16 @@ export default class App extends Component {
     });
   };
 
+  removeJob = (e) => {
+    e.preventDefault();
+    let newExperience = this.state.experience.filter(
+      (job) => e.target.getAttribute("data-id") !== job.id
+    );
+    this.setState({
+      experience: newExperience,
+    });
+  };
+
   addNewJob = () => {
     this.setState({
       experience: [
@@ -231,6 +241,7 @@ export default class App extends Component {
             onLastYearChange={this.onLastYearChange}
             onJobDescriptionChange={this.onJobDescriptionChange}
             addNewJob={this.addNewJob}
+            removeJob={this.removeJob}
           />
           <GeneralInfo info={this.state.generalInfo} />
           <Experience experience={this.state.experience} />
