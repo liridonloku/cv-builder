@@ -259,7 +259,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Header title="CV Maker" />
+        <Header title="CV Generator" />
         <div className="container">
           <InputGeneralInfo
             info={this.state.generalInfo}
@@ -289,7 +289,7 @@ export default class App extends Component {
             removeSchool={this.removeSchool}
             addNewSchool={this.addNewSchool}
           />
-          <div className="separator"></div>
+          <div className="separator no-print"></div>
           <GeneralInfo info={this.state.generalInfo} />
           <Experience experience={this.state.experience} />
           <Education education={this.state.education} />

@@ -38,3 +38,21 @@
   width: 100%;
   margin: 20px 0;
 }
+
+/* Don't print page title and address */
+@page {
+  size: auto;
+  margin: 0mm;
+}
+
+/* Print only the CV */
+@media print {
+  body {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .no-print {
+    display: none !important;
+    height: 0px !important;
+  }
+}

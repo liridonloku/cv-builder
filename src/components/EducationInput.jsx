@@ -76,7 +76,7 @@ export default class EducationInput extends Component {
       </form>
     ));
     return (
-      <div>
+      <div className="no-print">
         <h3 style={{ textAlign: "center" }}>Education</h3>
         {items}
         <div style={{ margin: "0 15px" }}>

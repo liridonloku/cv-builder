@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class InputGeneralInfo extends Component {
   render() {
     return (
-      <div>
+      <div className="no-print">
         <h3 style={{ textAlign: "center" }}>General Info</h3>
         <form
           style={{
