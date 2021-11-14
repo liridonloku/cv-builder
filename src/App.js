@@ -289,7 +289,13 @@ export default class App extends Component {
             removeSchool={this.removeSchool}
             addNewSchool={this.addNewSchool}
           />
-          <div className="separator no-print"></div>
+          <div className="separator no-print">
+            <p>
+              Scroll down to preview the CV, or click the button to Print/Save
+              as PDF.
+            </p>
+            <button onClick={window.print}>Print/Save as PDF</button>
+          </div>
           <GeneralInfo info={this.state.generalInfo} />
           <Experience experience={this.state.experience} />
           <Education education={this.state.education} />
