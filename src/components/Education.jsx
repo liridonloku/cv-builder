@@ -4,7 +4,7 @@ import EducationItem from "./EducationItem";
 export class Education extends Component {
   render() {
     const items = this.props.education.map((education) => (
-      <EducationItem education={education} />
+      <EducationItem education={education} key={education.id} />
     ));
     return (
       <div style={educationStyle}>

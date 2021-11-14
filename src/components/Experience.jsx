@@ -4,7 +4,7 @@ import ExperienceItem from "./ExperienceItem";
 export class Experience extends Component {
   render() {
     const items = this.props.experience.map((job) => (
-      <ExperienceItem job={job} />
+      <ExperienceItem job={job} key={job.id} />
     ));
     return (
       <div style={experienceStyle}>
