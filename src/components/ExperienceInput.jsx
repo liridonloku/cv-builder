@@ -96,6 +96,14 @@ export default class ExperienceInput extends Component {
       <div>
         <h3 style={{ textAlign: "center" }}>Experience</h3>
         {items}
+        <div style={{ margin: "0 15px" }}>
+          <button
+            style={{ width: "100%", boxShadow: "0 0 3px black" }}
+            onClick={this.props.addNewJob}
+          >
+            Add
+          </button>
+        </div>
       </div>
     );
   }

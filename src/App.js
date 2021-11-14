@@ -192,6 +192,23 @@ export default class App extends Component {
     });
   };
 
+  addNewJob = () => {
+    this.setState({
+      experience: [
+        ...this.state.experience,
+        {
+          company: "",
+          position: "",
+          location: "",
+          firstYear: "",
+          lastYear: "",
+          description: "",
+          id: Math.floor(Math.random() * 10000000).toString(),
+        },
+      ],
+    });
+  };
+
   render() {
     return (
       <div>
@@ -213,6 +230,7 @@ export default class App extends Component {
             onFirstYearChange={this.onFirstYearChange}
             onLastYearChange={this.onLastYearChange}
             onJobDescriptionChange={this.onJobDescriptionChange}
+            addNewJob={this.addNewJob}
           />
           <GeneralInfo info={this.state.generalInfo} />
           <Experience experience={this.state.experience} />
