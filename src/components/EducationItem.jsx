@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export class EducationItem extends Component {
   render() {
     return (
-      <div className="education-item" key={this.props.education.id}>
+      <div className="education-item">
         <ul style={{ paddingLeft: "15px" }}>
           <li style={yearsStyle}>
             {this.props.education.firstYear} - {this.props.education.lastYear}

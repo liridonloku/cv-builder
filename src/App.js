@@ -4,6 +4,7 @@ import InputGeneralInfo from "./components/InputGeneralInfo";
 import GeneralInfo from "./components/GeneralInfo";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
+import ExperienceInput from "./components/ExperienceInput";
 import "./App.css";
 
 export default class App extends Component {
@@ -137,6 +138,7 @@ export default class App extends Component {
             onPositionChange={this.onPositionChange}
             onDescriptionChange={this.onDescriptionChange}
           />
+          <ExperienceInput experience={this.state.experience} />
           <GeneralInfo info={this.state.generalInfo} />
           <Experience experience={this.state.experience} />
           <Education education={this.state.education} />
